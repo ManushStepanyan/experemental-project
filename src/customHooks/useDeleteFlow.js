@@ -8,7 +8,7 @@ export const useDeleteFlows = () => {
   return useMutation((id) => {
     axios.delete(`http://localhost:8082/flows/${id}`)
       .then((res) => {
-      res.data = { id };
+      res.data = id;
       remove(id);
     });
   });
